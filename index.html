@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comorile satului Tătărăuca Veche</title>
+    <link rel="icon" href="imagini/logo.png">
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <script src="https://kit.fontawesome.com/8a1f01fb65.js" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDMX3Tk0VBrDRqKdy93f6VuCnHXcpttyLM",
+            authDomain: "tatarauca-veche.firebaseapp.com",
+            projectId: "tatarauca-veche",
+            storageBucket: "tatarauca-veche.appspot.com",
+            messagingSenderId: "386352786719",
+            appId: "1:386352786719:web:b9926eecc04d43a711d42a",
+            measurementId: "G-ELCC543TJF"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+</head>
+
+<body>
+    <!-- bara de navigare -->
+    <nav>
+        <img src="imagini/logo.png">
+        <div class="right">
+            <div class="link">
+                <a class="activ" href="index.html">Acasă</a>
+                <a href="pagini/activitati.html">Activități</a>
+                <a href="pagini/echipa.html">Echipa</a>
+            </div>
+            <a href="#stelute">
+                <button>Evaluează-ne</button>
+            </a>
+        </div>
+    </nav>
+
+    <!-- headerul -->
+    <header>
+        <div class="content">
+            <p>Tradiții vii, povești de neuitat</p>
+            <h1>Descoperim Comorile satului Tătărăuca Veche</h1>
+            <p>Acest proiect este creat de elevii și profesorii din Tătărăuca Veche, cu dorința de a păstra frumusețea
+                trecutului și de a o arăta lumii. Prin activități simple, dar pline de suflet, redăm viață tradițiilor
+                și descoperim împreună ce comori ascunde satul nostru.
+            </p>
+            <a href="#stelute">
+                <button>Activitățile noastre</button>
+            </a>
+        </div>
+    </header>
+
+    <!-- informatii -->
+    <section class="info">
+        <h2>Informații</h2>
+        <p>Acesta este un proiect educațional dedicat promovării tradițiilor, obiceiurilor și istoriei satului nostru,
+            Tătărăuca Veche. În cadrul acestui proiect, elevii și cadrele didactice au realizat mai multe activități
+            pentru a păstra și transmite mai departe comorile culturale ale satului nostru.
+        </p>
+    </section>
+
+
+    <!-- activitati -->
+    <section class="activitati">
+        <h2>Împărtășim cu mândrie câteva dintre activitățile realizate în cadrul proiectului:</h2>
+        <div class="toate">
+            <div class="divi">
+                <img src="imagini/imag 6.jpg">
+                <h3>Cu ei noi ne mândrim</h3>
+                <p>În această etapă am vorbit despre oamenii deosebiți din satul nostru, care prin muncă, talent sau
+                    fapte frumoase ne fac cinste și ne inspiră.</p>
+                <a href="pagini/activitati.html#unu">
+                    <button>Mai multe</button>
+                </a>
+            </div>
+            <div class="divi">
+                <img src="imagini/imag 16.png">
+                <h3>Tradiții și obiceiuri</h3>
+                <p>Am descoperit tradițiile și obiceiurile păstrate cu sfințenie în Tătărăuca Veche, mai ales cele
+                    legate de sărbători, cum ar fi Crăciunul și Paștele.</p>
+                <a href="pagini/activitati.html#doi">
+                    <button>Mai multe</button>
+                </a>
+            </div>
+            <div class="divi">
+                <img src="imagini/imag 17.png">
+                <h3>Bucate tradiționale</h3>
+                <p>Am prezentat cele mai iubite bucate ale satului, pregătite cu grijă în familie: plăcinte, colaci,
+                    sarmale și mămăligă.</p>
+                <a href="pagini/activitati.html#trei">
+                    <button>Mai multe</button>
+                </a>
+            </div>
+            <div class="divi">
+                <img src="imagini/imag 18.png">
+                <h3>Promovarea locurilor turistice</h3>
+                <p>Am identificat cele mai frumoase locuri din localitate și am realizat o hartă turistică pentru a le
+                    face cunoscute vizitatorilor.</p>
+                <a href="pagini/activitati.html#patru">
+                    <button>Mai multe</button>
+                </a>
+            </div>
+            <div class="divi">
+                <img src="imagini/imag 19.png">
+                <h3>Etnografia și folclorul</h3>
+                <p>Am cercetat portul popular, cântecele, dansurile și poveștile vechi, care fac parte din identitatea
+                    noastră culturală.</p>
+                <a href="pagini/activitati.html#cinci">
+                    <button>Mai multe</button>
+                </a>
+            </div>
+            <div class="divi">
+                <img src="imagini/imag 20.png">
+                <h3>Localitatea mea – comoară</h3>
+                <p>Am vorbit despre Tătărăuca Veche ca despre o adevărată comoară, plină de istorie, oameni buni și
+                    valori moștenite de la strămoși.</p>
+                <a href="pagini/activitati.html#sase">
+                    <button>Mai multe</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="despre">
+        <div class="text">
+            <h2>Proiectul nostru – o călătorie prin valorile locale</h2>
+            <p>Am început prin a prezenta oamenii de care suntem mândri. Apoi am adunat tradițiile și sărbătorile
+                satului. Am vorbit despre bucatele tradiționale, am promovat locurile turistice printr-o hartă, am
+                cercetat folclorul și portul popular. La final, am arătat cât de prețioasă este moștenirea lăsată de
+                strămoși.
+            </p>
+            <a href="pagini/activitati.html">
+                <button>Descoperă activitățile noastre</button>
+            </a>
+        </div>
+        <div class="imagini">
+            <img class="unu" src="imagini/imag 2.jpg">
+            <img class="doi" src="imagini/imag 3.jpg">
+        </div>
+    </section>
+
+    <section class="echipa-info">
+        <img id="echip" src="imagini/imag 3.jpg">
+        <div class="text">
+            <h2>Echipa noastră</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing voluptas suscipit odit expedita
+                dolorum esse neque accusamus id est?
+            </p>
+            <a href="pagini/echipa.html">
+                <button>Echipa noastră</button>
+            </a>
+        </div>
+    </section>
+
+    <section id="stelute">
+        <div id="rating-container">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <p id="rating-result">Se încarcă...</p>
+    </section>
+
+    <style>
+        .star {
+            font-size: 2em;
+            cursor: pointer;
+            color: gray;
+        }
+
+        .star.active {
+            color: gold;
+        }
+    </style>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Despre Noi</h3>
+                <p>Acest proiect este creat de elevii și profesorii din Tătărăuca Veche, cu dorința de a păstra
+                    frumusețea trecutului și de a o arăta lumii. Prin activități simple, dar pline de suflet, redăm
+                    viață tradițiilor și descoperim împreună ce comori ascunde satul nostru.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Link-uri utile</h3>
+                <a href="index.html">Acasă</a><br>
+                <a href="pagini/despre.html">Activități</a><br>
+                <a href="pagini/premieri.html">Echipa</a><br>
+                <a href="pagini/despre.html#proiecte">Evaluează-ne</a><br>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacte</h3>
+                <a href="tel:+37379759532">Telefon: +373 797 595 32</a><br>
+                <a href="mailto:cujbastela@gmail.com">Email: cujbastela@gmail.com</a><br>
+                <a>Adresă: Tătărăuca Veche, Soroca, Moldova</p>
+                    <a href="https://maps.app.goo.gl/fmZZAw67k7fe8qG16" target="_blank">Vezi pe hartă</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Urmărește-ne</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100023747765107" target="_blank"><i
+                            class="fab fa-facebook">
+                        </i>
+                    </a>
+                    <a href="https://www.instagram.com/stela.cujba/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@StelaCujb%C4%83" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span class="anul"></span> Acest website a fost realizat în cadrul proiectului educațional
+                „Descoperim comorile strămoșilor noștri” organizat de Direcția Învățământ Soroca și Muzeul de Istorie și
+                Etnografie „Nicolae Bulat” din Soroca și nu reflectă neapărat opinia proiectului.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const anElemente = document.querySelectorAll('.anul');
+            const anCurent = new Date().getFullYear();
+            anElemente.forEach(element => {
+                element.textContent = anCurent;
+            });
+        });
+    </script>
+
+
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const result = document.getElementById('rating-result');
+
+        let alreadyVoted = false;
+
+        function updateDisplay(avg) {
+            const rounded = Math.round(avg);
+            stars.forEach((star, index) => {
+                star.classList.toggle('active', index < rounded);
+            });
+            result.textContent = `Nota medie: ${avg.toFixed(1)} din 5`;
+        }
+
+        function getAverage() {
+            db.collection("ratings").get().then(snapshot => {
+                let total = 0;
+                let count = 0;
+                snapshot.forEach(doc => {
+                    total += doc.data().value;
+                    count++;
+                });
+                if (count > 0) updateDisplay(total / count);
+                else result.textContent = "Nicio evaluare încă.";
+            });
+        }
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                if (alreadyVoted) return alert("Ai votat deja!");
+
+                const value = parseInt(star.getAttribute('data-value'));
+                db.collection("ratings").add({ value }).then(() => {
+                    alreadyVoted = true;
+                    getAverage();
+                });
+            });
+        });
+
+        getAverage();
+        
+    </script>
+
+</body>
+
+</html>
