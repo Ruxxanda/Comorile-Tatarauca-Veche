@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comorile satului Tătărăuca Veche</title>
+    <link rel="icon" href="../imagini/logo.png">
+
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/8a1f01fb65.js" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDMX3Tk0VBrDRqKdy93f6VuCnHXcpttyLM",
+            authDomain: "tatarauca-veche.firebaseapp.com",
+            projectId: "tatarauca-veche",
+            storageBucket: "tatarauca-veche.appspot.com",
+            messagingSenderId: "386352786719",
+            appId: "1:386352786719:web:b9926eecc04d43a711d42a",
+            measurementId: "G-ELCC543TJF"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+</head>
+
+<body>
+    <nav class="noindex">
+        <img src="../imagini/logo.png">
+        <div class="right">
+            <div class="link">
+                <a href="../index.html">Acasă</a>
+                <a href="activitati.html">Activități</a>
+                <a class="activ" href="echipa.html">Echipa</a>
+            </div>
+            <a href="echipa.html#stelute">
+                <button>Evaluează-ne</button>
+            </a>
+        </div>
+    </nav>
+
+    <header class="noindex">
+        <div class="content">
+            <h1>Echipa proiectului</h1>
+            <p>Suntem un grup de elevi îndrumați de profesoara de istorie Cujbă Stela. Împreună am lucrat cu drag pentru
+                a spune povestea satului nostru prin acest proiect.
+            </p>
+        </div>
+    </header>
+
+
+    <section class="echipa">
+        <h2>Echipa noastră</h2>
+        <div class="celiki">
+            <div class="cel">
+                <div class="poza x1">
+                    <img src="../imagini/coordonator.jpg">
+                </div>
+                <h3>Cujbă Stela</h3>
+            </div>
+            <div class="cel">
+                <div class="poza x2">
+                    <img src="../imagini/persoana 1.jpg">
+                </div>
+                <h3>Buimistru Irina</h3>
+            </div>
+            <div class="cel">
+                <div class="poza x3">
+                    <img src="../imagini/persoana 2.jpg">
+                </div>
+                <h3>Cujbă Vladimir</h3>
+            </div>
+            <div class="cel">
+                <div class="poza x4">
+                    <img src="../imagini/persoana 3.jpg">
+                </div>
+                <h3>Ursu Roxana-Adriana</h3>
+            </div>
+            <div class="cel">
+                <div class="poza x5">
+                    <img src="../imagini/persoana 4.jpg">
+                </div>
+                <h3>Moisei Andreea</h3>
+            </div>
+            <div class="cel">
+                <div class="poza x6">
+                    <img src="../imagini/persoana 5.jpg">
+                </div>
+                <h3>Procopii Anastasia</h3>
+            </div>
+            <div class="cel">
+                <div class="poza x7">
+                    <img src="../imagini/persoana 6.jpg">
+                </div>
+                <h3>Chiriac Natalia</h3>
+            </div>
+            <div class="cel">
+                <div class="poza x8">
+                    <img src="../imagini/persoana 7.jpg">
+                </div>
+                <h3>Prisăcari Ilinca</h3>
+            </div>
+            <div class="cel">
+                <div class="poza x9">
+                    <img src="../imagini/persoana 8.jpg">
+                </div>
+                <h3>Vieru Ruxanda</h3>
+            </div>
+            <div class="cel">
+                <div class="poza x10">
+                    <img src="../imagini/persoana 9.jpg">
+                </div>
+                <h3>Parfinescu Tatiana</h3>
+            </div>
+            <div class="cel">
+                <div class="poza x11">
+                    <img src="../imagini/persoana 10.jpg">
+                </div>
+                <h3>Plohii Mădălina</h3>
+            </div>
+            <div class="cel">
+                <div class="poza x12">
+                    <img src="../imagini/persoana 11.png">
+                </div>
+                <h3>Pistrui Mihai</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="stelute">
+        <div id="rating-container">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <p id="rating-result">Se încarcă...</p>
+    </section>
+
+    <style>
+        .star {
+            font-size: 2em;
+            cursor: pointer;
+            color: gray;
+        }
+
+        .star.active {
+            color: gold;
+        }
+    </style>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Despre Noi</h3>
+                <p>Acest proiect este creat de elevii și profesorii din Tătărăuca Veche, cu dorința de a păstra
+                    frumusețea trecutului și de a o arăta lumii. Prin activități simple, dar pline de suflet, redăm
+                    viață tradițiilor și descoperim împreună ce comori ascunde satul nostru.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Link-uri utile</h3>
+                <a href="index.html">Acasă</a><br>
+                <a href="pagini/despre.html">Activități</a><br>
+                <a href="pagini/premieri.html">Echipa</a><br>
+                <a href="pagini/despre.html#proiecte">Evaluează-ne</a><br>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacte</h3>
+                <a href="tel:+37379759532">Telefon: +373 797 595 32</a><br>
+                <a href="mailto:cujbastela@gmail.com">Email: cujbastela@gmail.com</a><br>
+                <a>Adresă: Tătărăuca Veche, Soroca, Moldova</p>
+                    <a href="https://maps.app.goo.gl/fmZZAw67k7fe8qG16" target="_blank">Vezi pe hartă</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Urmărește-ne</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100023747765107" target="_blank"><i
+                            class="fab fa-facebook">
+                        </i>
+                    </a>
+                    <a href="https://www.instagram.com/stela.cujba/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@StelaCujb%C4%83" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span class="anul"></span> Acest website a fost realizat în cadrul proiectului educațional
+                „Descoperim comorile strămoșilor noștri” organizat de Direcția Învățământ Soroca și Muzeul de Istorie și
+                Etnografie „Nicolae Bulat” din Soroca și nu reflectă neapărat opinia proiectului.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const anElemente = document.querySelectorAll('.anul');
+            const anCurent = new Date().getFullYear();
+            anElemente.forEach(element => {
+                element.textContent = anCurent;
+            });
+        });
+    </script>
+
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const result = document.getElementById('rating-result');
+
+        let alreadyVoted = false;
+
+        function updateDisplay(avg) {
+            const rounded = Math.round(avg);
+            stars.forEach((star, index) => {
+                star.classList.toggle('active', index < rounded);
+            });
+            result.textContent = `Nota medie: ${avg.toFixed(1)} din 5`;
+        }
+
+        function getAverage() {
+            db.collection("ratings").get().then(snapshot => {
+                let total = 0;
+                let count = 0;
+                snapshot.forEach(doc => {
+                    total += doc.data().value;
+                    count++;
+                });
+                if (count > 0) updateDisplay(total / count);
+                else result.textContent = "Nicio evaluare încă.";
+            });
+        }
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                if (alreadyVoted) return alert("Ai votat deja!");
+
+                const value = parseInt(star.getAttribute('data-value'));
+                db.collection("ratings").add({ value }).then(() => {
+                    alreadyVoted = true;
+                    getAverage();
+                });
+            });
+        });
+
+        getAverage();
+    </script>
+
+</body>
+
+</html>
