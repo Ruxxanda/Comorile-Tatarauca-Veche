@@ -690,7 +690,7 @@ section.cinci .video .videee {
     flex-wrap: wrap;
 }
 
-section.cinci .video .videee video {
+section.cinci .video .videee iframe {
     height: 190px;
     width: calc(50% - 10px);
     border-radius: 5px;
